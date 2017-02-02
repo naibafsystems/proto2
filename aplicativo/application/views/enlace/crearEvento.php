@@ -1,0 +1,141 @@
+                                                <?php ?>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center"><?php echo $this->lang->line('Crear Oferta'); ?></h3>
+                <form class="form-horizontal" enctype="multipart/form-data" role="form" id="formCrearEvento" action="<?php echo base_url('enlace/eventos/guardarEvento/') ?>" name="formCrearEvento" method="post">
+                    <div class="form-group has-feedback">
+                        <div class="col-sm-4 text-right">
+                            <label for="descripcion" class="control-label"><?php echo $this->lang->line('Descripci&oacute;n:'); ?></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <textarea class="validate[required, min[10]] form-control" id="descripcion" name="descripcion"></textarea>
+                            <span class="fa fa-check form-control-feedback"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group has-feedback">
+                        <div class="col-sm-4 text-right">
+                            <label for="actividad" class="control-label"><?php echo $this->lang->line('Tipo Actividad:'); ?></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="validate[required] form-control select2-select" id="actividad" name="actividad">
+                                <option value=""><?php echo $this->lang->line('Seleccione...'); ?></option>
+                                <?php
+                                $grupo = 0;
+                                
+                                foreach ($tipo_actividad as $row) {
+                                    
+                                    if($row->grupo != $grupo)
+                                        {
+                                            if($row->grupo > 1)
+                                                {
+                                                    echo "</optgroup>";
+                                                }
+                                            switch($row->grupo)
+                                            {
+                                                case 1:
+                                                    echo "<optgroup label='".$this->lang->line('Actividad Academica')."'>";
+                                                    break;
+                                                
+                                                case 2:
+                                                    echo "<optgroup label='".$this->lang->line('Actividad General')."'>";
+                                                    break;
+                                            }
+                                            
+                                            $grupo = $row->grupo;
+                                        }
+                                    echo "<option value='" . $row->id_tipo_actividad . "'>" . $this->lang->line($row->descripcion_es) . "</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group has-feedback">
+                        <div class="col-sm-4 text-right">
+                            <label for="clasificacion" class="control-label"><?php echo $this->lang->line('Tipo Clasificación'); ?>:</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="validate[required] form-control select2-select" id="clasificacion" name="clasificacion">
+                                <option value=""><?php echo $this->lang->line('Seleccione...'); ?></option>
+                                <?php
+                                foreach ($tipo_clasificacion as $row) {
+                                    echo "<option value='" . $row->id_tipo_clasificacion . "'>" . $this->lang->line("clasificacion".$row->id_tipo_clasificacion) . "</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <div class="col-sm-4 text-right">
+                            <label for="pais_organiza" class="control-label"><?php echo $this->lang->line('Pais Organizador'); ?>:</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="validate[required] form-control select2-select" id="pais_organiza" name="pais_organiza[]" multiple="multiple">
+                                <option value=""><?php echo $this->lang->line('Seleccione...'); ?></option>
+                                <?php
+                                foreach ($paises as $row) {
+                                    echo "<option value='" . $row->codi_pais . "'>" . $row->desc_pais . "</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group has-feedback">
+                        <div class="col-sm-4 text-right">
+                            <label for="inputFechini" class="control-label"><?php echo $this->lang->line('Fecha Inicio Actividad'); ?>:</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" data-provide="datepicker" data-date-format="yyyy-mm-dd" class="validate[required] form-control" id="inputfechini" name="inputfechini" placeholder="<?php echo $this->lang->line('Fecha de Inicio de la Actividad'); ?>">
+                            <span class="fa fa-check form-control-feedback"></span>
+                        </div>
+                    </div>                    
+                    <div class="form-group has-feedback">
+                        <div class="col-sm-4 text-right">
+                            <label for="inputFechfin" class="control-label"><?php echo $this->lang->line('Fecha Final Actividad'); ?>:</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" data-provide="datepicker" data-date-format="yyyy-mm-dd" class="validate[required] form-control" id="inputfechfin" name="inputfechfin" placeholder="<?php echo $this->lang->line('Fecha de Finalizaci&oacute;n de la Actividad'); ?>">
+                            <span class="fa fa-check form-control-feedback"></span>
+                        </div>
+                    </div> 
+                    
+                    <div class="form-group has-feedback">
+                        <div class="col-sm-4 text-right">
+                            <label for="contacto" class="control-label"><?php echo $this->lang->line('Correo de contacto').":"; ?></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="validate[required, custom[email]] form-control" id="contacto" name="contacto"/>
+                            <span class="fa fa-check form-control-feedback"></span>
+                        </div>
+                    </div> 
+                    <div class="form-group has-feedback">
+                        <div class="col-sm-4 text-right">
+                            <label for="link" class="control-label"><?php echo $this->lang->line('link Informacion').":"; ?></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="validate[min[10], custom[url]] form-control" id="link" name="link"/>
+                            <span class="fa fa-check form-control-feedback"></span>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <div class="col-sm-4 text-right">
+                            <label for="userfile" class="control-label"><?php echo $this->lang->line('DocumentoActividad').":"; ?></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="file" class="validate[required]" id="documento" name="documento">                            
+                        </div>
+                    </div>                     
+                    <div class="form-group">
+                        <div class="col-sm-8 col-sm-offset-2 text-center">
+                            <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-check"></i><?php echo $this->lang->line('Guardar'); ?></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

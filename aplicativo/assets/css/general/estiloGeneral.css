@@ -1,0 +1,84 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1/04/2015, 01:32:22 PM
+    Author     : Edwin Sanchez
+*/
+
+/*Menu footer*/
+.menu_footer, .menu_pie, .menu ul, .menu li, .menu a{
+	margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+.menu_footer{
+	position: absolute;
+	z-index: 2;
+	height: 50px;
+	top: 15px;
+	right: 80px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1em;
+}
+.menu_pie{
+	color: #fff;
+	border-left: 1px solid #393942;
+}
+.menu_pie li {
+    position: relative;
+    list-style: none;
+    float: left;
+    display: block;
+    height: 40px;
+}
+.menu_pie li a {
+    display: block;
+    padding: 0 14px;
+    margin: 6px 0;
+    line-height: 28px;
+    text-decoration: none;
+ 
+    border-left: 1px solid #393942;
+    border-right: 1px solid #393942;
+ 
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+ 
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+}
+.menu_pie li:hover > a{ 
+	color: #009245; 
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.col-fixed {
+    /* custom width */
+    width:320px;
+}
+.col-min {
+    /* custom min width */
+    min-width:320px;
+}
+.col-max {
+    /* custom max width */
+    max-width:320px;
+}

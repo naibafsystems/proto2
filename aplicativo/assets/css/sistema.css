@@ -1,0 +1,268 @@
+.container-fluid{
+	margin-bottom:150px !important;
+}
+
+.footer {
+	background-color: #B3134F;
+	bottom: 0;
+	height: 60px;
+	position: relative;
+	width: 100%;
+	padding: 20px;
+	z-index: 200;
+}
+
+#colorbar {
+	background-color: rgb(182, 1, 76);
+	height: 15px;
+	position: relative;
+	z-index: 898;
+}
+#color_container {
+	height: 35px;
+	/*left: 6.84%;*/
+	position: inherit;
+	top: -10px;
+	width: 80%;
+}
+.color1 {
+	background-color: rgb(245, 188, 0);
+	float: left;
+	position: inherit;
+}
+.color2 {
+	background-color: rgb(240, 153, 37);
+	float: left;
+	position: inherit;
+}
+.color3 {
+	background-color: rgb(199, 214, 79);
+	float: left;
+	position: inherit;
+}
+.color4 {
+	background-color: rgb(143, 190, 62);
+	float: left;
+	position: inherit;
+}
+.color5 {
+	background-color: rgb(54, 169, 225);
+	float: left;
+	position: inherit;
+}
+.color6 {
+	background-color: rgb(0, 128, 181);
+	float: left;
+	position: inherit;
+}
+#areaa {
+	float: left;
+	height: 25px;
+	margin-top: 10px;
+	position: inherit;
+	width: 4%;
+}
+#area1 {
+	height: 15px;
+	width: 100%;
+}
+#area2 {
+	height: 10px;
+	width: 20%;
+}
+#area3 {
+	height: 15px;
+	margin-top: 10px;
+	width: 5%;
+}
+#area4 {
+	height: 15px;
+	margin-top: 10px;
+	width: 15%;
+}
+#areab {
+	float: left;
+	height: 25px;
+	margin-top: 10px;
+	position: inherit;
+	width: 12%;
+}
+#area5 {
+	height: 15px;
+	width: 100%;
+}
+#area6 {
+	height: 10px;
+	width: 40%;
+}
+#area7 {
+	height: 10px;
+	width: 10%;
+}
+#areac {
+	float: left;
+	height: 25px;
+	margin-top: 10px;
+	position: inherit;
+	width: 8%;
+}
+#area8 {
+	height: 15px;
+	width: 100%;
+}
+#area9 {
+	height: 10px;
+	width: 15%;
+}
+#area10 {
+	height: 15px;
+	margin-top: 10px;
+	width: 3.5%;
+}
+#area11 {
+	height: 15px;
+	margin-top: 10px;
+	width: 5%;
+}
+#aread {
+	float: left;
+	height: 25px;
+	position: inherit;
+	width: 8%;
+}
+#area12 {
+	height: 10px;
+	width: 15%;
+}
+#area13 {
+	height: 15px;
+	width: 100%;
+}
+#area14 {
+	height: 15px;
+	margin-top: 10px;
+	width: 4%;
+}
+#areae {
+	float: left;
+	height: 25px;
+	margin-top: 10px;
+	position: inherit;
+	width: 5%;
+}
+#area15 {
+	height: 15px;
+	width: 100%;
+}
+#area16 {
+	float: right;
+	height: 10px;
+	width: 25%;
+}
+#areaf {
+	float: left;
+	height: 35px;
+	position: inherit;
+	width: 15%;
+}
+#area17 {
+	float: right;
+	height: 10px;
+	width: 10%;
+}
+#area18 {
+	height: 15px;
+	width: 100%;
+}
+#area19 {
+	height: 10px;
+	width: 10%;
+}
+#areag {
+	float: left;
+	height: 25px;
+	position: inherit;
+	width: 10%;
+}
+#area20 {
+	float: right;
+	height: 10px;
+	width: 15%;
+}
+#area21 {
+	height: 15px;
+	width: 100%;
+}
+#area22 {
+	height: 10px;
+	margin-top: 25px;
+	width: 1%;
+}
+
+#icon-net {
+	float: right;
+	height: 30px;
+	margin: 10px 5px;
+	width: 30px;
+}
+
+.ml {
+	background: rgba(0, 0, 0, 0) url("../images/mail.png") no-repeat scroll 0 0;
+}
+
+.tw {
+	background: rgba(0, 0, 0, 0) url("../images/twitter.png") no-repeat scroll 0 0;
+}
+
+.fb {
+	background: rgba(0, 0, 0, 0) url("../images/facebook.png") no-repeat scroll 0 0;
+}
+
+.yt {
+	background: rgba(0, 0, 0, 0) url("../images/youtube.png") no-repeat scroll 0 0;
+}
+
+.papel {
+	display: block;
+	position: relative;
+	margin: 10px;
+	padding: 20px;
+	font-family: "Courier New";
+	font-size: 120%;
+	font-weight: bold;
+	background: url(http://3.bp.blogspot.com/_0eC4K-qZ7AM/TUQ4mutGAlI/AAAAAAAAMz4/nZvfKXcAje0/s1600/cuadriculado.jpg);
+}
+.papel:before, .papel:after {
+	-webkit-box-shadow: 0 15px 10px rgba(0,0,0, .7);
+	-moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	position: absolute;
+	bottom: 15px;
+	z-index: -1;
+	width: 50%;
+	height: 20%;
+	content: "";
+}
+.papel:before {
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+}
+.papel:after {
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	right: 10px;
+}
+
+span.glyphicon {
+	font-size: 1.2em;
+}
+
+.divInspirate {
+	-webkit-box-shadow: 10px 0px 112px 4px rgba(0,0,0,0.41);
+	-moz-box-shadow: 10px 0px 112px 4px rgba(0,0,0,0.41);
+	box-shadow: 10px 0px 112px 4px rgba(0,0,0,0.41);
+	background-color: rgb(240, 153, 37);
+}
+

@@ -1,0 +1,2 @@
+[15-Jul-2015 15:54:11 UTC] PHP Fatal error:  Class 'Productos_model' not found in /home/suatech/public_html/rtcV2/system/core/Loader.php on line 304
+[15-Jul-2015 15:54:23 UTC] PHP Fatal error:  Call to a member function rol_usuario() on a non-object in /home/suatech/public_html/rtcV2/application/controllers/transversal/productos.php on line 23
